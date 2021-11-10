@@ -14,7 +14,8 @@ class UpdateUserTable extends Migration
     public function up()
     {
         Schema::table('users',function (Blueprint $table){
-            $table->boolean('admin');
+            $table->boolean('admin')->default(false);
+            $table->string('profile_picture')->nullable(true);
         });
     }
 
