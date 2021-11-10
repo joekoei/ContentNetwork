@@ -27,5 +27,8 @@ Route::get('/todo', function () {
     return view('todo');
 })->middleware(['auth'])->name('todo');
 
+Route::get('/media',function (){
+    return view('media');
+})->middleware(['auth'])->name('media');
 
 require __DIR__.'/auth.php';

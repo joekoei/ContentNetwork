@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('todo')" :active="request()->routeIs('todo')">
                         Todo page
                     </x-nav-link>
+                    <x-nav-link :href="route('media')" :active="request()->routeIs('media')">
+                        Files page
+                    </x-nav-link>
                 </div>
             </div>
 
