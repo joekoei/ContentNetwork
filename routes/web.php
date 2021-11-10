@@ -23,4 +23,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/todo', function () {
+    return view('todo');
+})->middleware(['auth'])->name('todo');
+
+
 require __DIR__.'/auth.php';
