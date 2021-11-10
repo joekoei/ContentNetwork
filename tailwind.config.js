@@ -12,6 +12,7 @@ module.exports = {
             backgroundImage: {
                 'logo_zwart': "url('/img/logo_jb_zwart.png')",
                 'logo_wit': "url('/img/logo_jb_wit.png')",
+                'groot': "url('/img/back.jpg')"
             },
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],

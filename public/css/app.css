@@ -17962,6 +17962,18 @@ select {
   background-image: linear-gradient(to top left, var(--tw-gradient-stops));
 }
 
+.bg-logo_zwart {
+  background-image: url('/img/logo_jb_zwart.png');
+}
+
+.bg-logo_wit {
+  background-image: url('/img/logo_jb_wit.png');
+}
+
+.bg-groot {
+  background-image: url('/img/back.jpg');
+}
+
 .from-transparent {
   --tw-gradient-from: transparent;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -49262,6 +49274,18 @@ select {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .sm\:bg-logo_zwart {
+    background-image: url('/img/logo_jb_zwart.png');
+  }
+
+  .sm\:bg-logo_wit {
+    background-image: url('/img/logo_jb_wit.png');
+  }
+
+  .sm\:bg-groot {
+    background-image: url('/img/back.jpg');
+  }
+
   .sm\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -80548,6 +80572,18 @@ select {
 
   .md\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .md\:bg-logo_zwart {
+    background-image: url('/img/logo_jb_zwart.png');
+  }
+
+  .md\:bg-logo_wit {
+    background-image: url('/img/logo_jb_wit.png');
+  }
+
+  .md\:bg-groot {
+    background-image: url('/img/back.jpg');
   }
 
   .md\:from-transparent {
@@ -111838,6 +111874,18 @@ select {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .lg\:bg-logo_zwart {
+    background-image: url('/img/logo_jb_zwart.png');
+  }
+
+  .lg\:bg-logo_wit {
+    background-image: url('/img/logo_jb_wit.png');
+  }
+
+  .lg\:bg-groot {
+    background-image: url('/img/back.jpg');
+  }
+
   .lg\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -143126,6 +143174,18 @@ select {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .xl\:bg-logo_zwart {
+    background-image: url('/img/logo_jb_zwart.png');
+  }
+
+  .xl\:bg-logo_wit {
+    background-image: url('/img/logo_jb_wit.png');
+  }
+
+  .xl\:bg-groot {
+    background-image: url('/img/back.jpg');
+  }
+
   .xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -174412,6 +174472,18 @@ select {
 
   .\32xl\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .\32xl\:bg-logo_zwart {
+    background-image: url('/img/logo_jb_zwart.png');
+  }
+
+  .\32xl\:bg-logo_wit {
+    background-image: url('/img/logo_jb_wit.png');
+  }
+
+  .\32xl\:bg-groot {
+    background-image: url('/img/back.jpg');
   }
 
   .\32xl\:from-transparent {
