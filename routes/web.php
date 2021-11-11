@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,22 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-})->name('index');
+Route::get('/', [MainController::class,'index'])->name('index');
 
 Route::redirect('/login','index');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [MainController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
 
-Route::get('/todo', function () {
-    return view('todo');
-})->middleware(['auth'])->name('todo');
+Route::get('/todo', [MainController::class,'todo'])->middleware(['auth'])->name('todo');
 
-Route::get('/media',function (){
-    return view('media');
-})->middleware(['auth'])->name('media');
+Route::get('/media',[MainController::class,'media'])->middleware(['auth'])->name('media');
 
 require __DIR__.'/auth.php';
