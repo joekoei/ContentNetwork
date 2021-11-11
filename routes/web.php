@@ -32,4 +32,6 @@ Route::get('/v1/stats',[MainController::class,'stats'])->middleware(['auth'])->n
 Route::get('/v1/users',[MainController::class,'adminUsers'])->middleware(['auth'])->name('admin.users');
 
 Route::get('/profile',[ProfileController::class, 'index'])->middleware(['auth'])->name('profile.show');
+Route::post('/profile',[ProfileController::class,'updateProfile'])->middleware(['auth'])->name('profile.update');
+
 require __DIR__.'/auth.php';

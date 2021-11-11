@@ -7,7 +7,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <h1 class="md:text-center">Gegevens van {{Auth::user()->name}}</h1>
-                    <form action="" class="md:m-4">
+                    <form action="{{route('profile.update')}}" method="POST" class="md:m-4" enctype="multipart/form-data">
                         @csrf
                         <div class="md:flex md:items-center mb-6">
                             <div class="md:w-1/3">
@@ -19,7 +19,7 @@
                                 <input
                                     class="bg-gray-100 appearance-none border-2 border-gray-100 rounded w-full
                                      py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                    id="inline-full-name" type="email" value="{{Auth::user()->email}}">
+                                    id="inline-full-name" type="email" name='email' value="{{Auth::user()->email}}">
                             </div>
                         </div>
 
@@ -33,7 +33,7 @@
                                 <input
                                     class="bg-gray-100 appearance-none border-2 border-gray-100 rounded w-full
                                      py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                    id="inline-full-name" type="email" value="{{Auth::user()->name}}">
+                                    id="inline-full-name" type="text" name="name" value="{{Auth::user()->name}}">
                             </div>
                         </div>
 
@@ -47,7 +47,7 @@
                                 <input
                                        class="bg-gray-100 appearance-none border-2 border-gray-100 rounded w-full
                                      py-2 px-4 text-gray-700 leading-tight focus:outline-none"
-                                       id="inline-full-name" type="file" value="">
+                                       id="inline-full-name" type="file" name="file">
                             </div>
                         </div>
 
