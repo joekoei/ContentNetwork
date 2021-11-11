@@ -15,12 +15,14 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('todo')" :active="request()->routeIs('todo')">
-                        Todo page
-                    </x-nav-link>
                     <x-nav-link :href="route('media')" :active="request()->routeIs('media')">
                         Files page
                     </x-nav-link>
+                    @if(Auth::user()->admin === 1)
+                        <x-nav-link :href="route('admin.users')" :active="request()->routeIs('admin.users')">
+                            Admin
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 
