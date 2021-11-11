@@ -42,4 +42,12 @@ class MainController extends Controller
             return redirect()->route('dashboard');
         }
     }
+
+    public function stats() {
+        if(Auth::user()->admin === 1) {
+            return view('admin.stats');
+        } else {
+            return redirect()->route('dashboard');
+        }
+    }
 }

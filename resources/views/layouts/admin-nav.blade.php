@@ -9,13 +9,13 @@
 
         <!-- Navigation Links -->
         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-            <x-nav-link>
+            <x-nav-link :href="route('admin')" :active="request()->routeIs('admin')">
                 Landingspage
             </x-nav-link>
-            <x-nav-link>
+            <x-nav-link :href="route('admin.users')" :active="request()->routeIs('admin.users')">
                 Users
             </x-nav-link>
-            <x-nav-link>
+            <x-nav-link :href="route('admin.stats')" :active="request()->routeIs('admin.stats')">
                 Stats about content network
             </x-nav-link>
         </div>

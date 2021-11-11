@@ -25,9 +25,11 @@ Route::get('/todo', [MainController::class,'todo'])->middleware(['auth'])->name(
 
 Route::get('/media',[MainController::class,'media'])->middleware(['auth'])->name('media');
 
-Route::get('/v1/users',[MainController::class,'adminUsers'])->middleware(['auth'])->name('admin.users');
-
 Route::get('/v1',[MainController::class,'admin'])->middleware(['auth'])->name('admin');
+
+Route::get('/v1/stats',[MainController::class,'stats'])->middleware(['auth'])->name('admin.stats');
+
+Route::get('/v1/users',[MainController::class,'adminUsers'])->middleware(['auth'])->name('admin.users');
 
 Route::get('/profile',[ProfileController::class, 'index'])->middleware(['auth'])->name('profile.show');
 require __DIR__.'/auth.php';

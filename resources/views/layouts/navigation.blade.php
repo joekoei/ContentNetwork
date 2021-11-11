@@ -19,7 +19,7 @@
                         Files page
                     </x-nav-link>
                     @if(Auth::user()->admin === 1)
-                        <x-nav-link :href="route('admin.users')" :active="request()->routeIs('admin.users')">
+                        <x-nav-link :href="route('admin')" :active="request()->routeIs('admin')">
                             Admin
                         </x-nav-link>
                     @endif

@@ -7,9 +7,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border border-gray-300">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-10">
-                        Click here to upload your file
-                    </button>
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                         <tr>
@@ -28,7 +25,7 @@
                         </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                        <tr>
+                        <tr class="border-b border-gray-150">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex items-center">
                                     <div class="ml-4">
@@ -50,7 +47,11 @@
                         </tr>
                         </tbody>
                     </table>
-
+                    <div class="right-0 flex justify-end">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-10 justify-end">
+                            Click here to upload your file
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
