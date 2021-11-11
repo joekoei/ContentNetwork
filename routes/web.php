@@ -24,4 +24,5 @@ Route::get('/todo', [MainController::class,'todo'])->middleware(['auth'])->name(
 
 Route::get('/media',[MainController::class,'media'])->middleware(['auth'])->name('media');
 
+Route::get('/profile',[ProfileController::class, 'index'])->middleware(['auth'])->name('profile.show');
 require __DIR__.'/auth.php';

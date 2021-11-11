@@ -1,5 +1,5 @@
 <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 relative">
-        <div class="absolute right-0 mr-20 mb-20">
+        <div class=" mr-20 mb-20 bg-white rounded-2xl">
             <div>
                 {{ $logo }}
             </div>
