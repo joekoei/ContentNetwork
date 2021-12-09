@@ -21,9 +21,10 @@ Route::redirect('/login','index');
 
 Route::get('/dashboard', [MainController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
 
-Route::get('/todo', [MainController::class,'todo'])->middleware(['auth'])->name('todo');
-
-Route::get('/media',[MainController::class,'media'])->middleware(['auth'])->name('media');
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'],function (){
+    Route::get('/todo', [MainController::class,'todo'])->middleware(['auth'])->name('todo');
+    Route::get('/media',[MainController::class,'media'])->middleware(['auth'])->name('media');
+});
 
 Route::group(['prefix' => 'v1', "middleware" => "auth"], function (){
     Route::get('/main',[MainController::class,'admin'])->middleware(['auth'])->name('admin');
