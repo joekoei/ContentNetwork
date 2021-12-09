@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -22,8 +23,10 @@ Route::redirect('/login','index');
 Route::get('/dashboard', [MainController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'],function (){
-    Route::get('/todo', [MainController::class,'todo'])->middleware(['auth'])->name('todo');
-    Route::get('/media',[MainController::class,'media'])->middleware(['auth'])->name('media');
+    Route::get('/todo', [MainController::class,'todo'])->name('todo');
+    Route::get('/media',[MainController::class,'media'])->name('media');
+    Route::get('/media/upload',[FileController::class,'create'])->name('media.upload');
+    Route::post('/media',[FileController::class,'store'])->name('file.store');
 });
 
 Route::group(['prefix' => 'v1', "middleware" => "auth"], function (){

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Media;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
@@ -22,7 +24,8 @@ class MainController extends Controller
     }
 
     public function media(){
-        return view('media');
+        $files = DB::table('media')->where('user_id','=',Auth::user()->id)->get();
+        return view('media')->with(compact('files'));
     }
 
     public function admin(){
