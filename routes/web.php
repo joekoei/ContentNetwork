@@ -27,6 +27,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'],function (){
     Route::get('/media',[MainController::class,'media'])->name('media');
     Route::get('/media/upload',[FileController::class,'create'])->name('media.upload');
     Route::post('/media',[FileController::class,'store'])->name('file.store');
+    Route::get('/profile',[ProfileController::class, 'index'])->middleware(['auth'])->name('profile.show');
+    Route::post('/profile',[ProfileController::class,'updateProfile'])->middleware(['auth'])->name('profile.update');
 });
 
 Route::group(['prefix' => 'v1', "middleware" => "auth"], function (){
@@ -34,8 +36,5 @@ Route::group(['prefix' => 'v1', "middleware" => "auth"], function (){
     Route::get('/stats',[MainController::class,'stats'])->middleware(['auth'])->name('admin.stats');
     Route::get('/users',[MainController::class,'adminUsers'])->middleware(['auth'])->name('admin.users');
 });
-
-Route::get('/profile',[ProfileController::class, 'index'])->middleware(['auth'])->name('profile.show');
-Route::post('/profile',[ProfileController::class,'updateProfile'])->middleware(['auth'])->name('profile.update');
 
 require __DIR__.'/auth.php';
